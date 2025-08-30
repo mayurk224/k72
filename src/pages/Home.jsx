@@ -1,9 +1,30 @@
-import React from 'react'
+import React from "react";
+import Video from "../components/home/Video";
+import HeroText from "../components/home/HeroText";
+import FooterText from "../components/home/FooterText";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="">
+      <div className="h-screen w-screen fixed">
+        <Video />
+      </div>
 
-export default Home
+      <div className="h-screen w-screen relative flex flex-col justify-between overflow-hidden px-5 py-5">
+        <HeroText />
+        <div className="flex justify-end">
+          <h4 className="text-white cursor-default font-[lausanne-300] leading-[1.5vw] text-end w-96">
+            K72 is an agency that thinks about every action to nourish the
+            brand. Tomorrow, in 5 months and in 5 years. We look for the
+            friction that creates the spark to generate emotion. To ensure an
+            honest relationship, we are without filter, we say what needs to be
+            said, we do what needs to be done.
+          </h4>
+        </div>
+        <FooterText />
+      </div>
+    </div>
+  );
+};
+
+export default Home;
