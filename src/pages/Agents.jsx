@@ -32,8 +32,13 @@ const Agents = () => {
           trigger: imageDivRef.current,
           start: "top 28.5%",
           end: "top -65%",
-          scrub: true,
           pin: true,
+          pinSpacing: true,
+          pinReparent: true,
+          pinType: "transform",
+          scrub: 1,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
 
           onUpdate: function (self) {
             imageRef.current.src =
@@ -49,7 +54,7 @@ const Agents = () => {
       <div className="section1 font-[lausanne-500]">
         <div
           ref={imageDivRef}
-          className="absolute h-80 w-60 rounded-3xl overflow-hidden  top-52 left-80"
+          className="absolute top-[-30vh] left-80 h-80 w-60 rounded-3xl overflow-hidden"
         >
           <img
             ref={imageRef}
@@ -58,7 +63,7 @@ const Agents = () => {
             alt=""
           />
         </div>
-        <div className=" mt-[60vh] relative">
+        <div className="mt-[60vh] relative">
           <h1 className="text-[16vw] uppercase text-white  leading-[15vw] text-center tracking-wider">
             Soixan7th <br />
             Twelve
