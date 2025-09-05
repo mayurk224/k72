@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Agents = () => {
-  return (
-    <div>Agents</div>
-  )
-}
+  return <div>Agents</div>;
+};
 
-export default Agents
+export default Agents;
