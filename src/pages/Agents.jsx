@@ -50,7 +50,7 @@ const Agents = () => {
   });
 
   return (
-    <div className="">
+    <div className="h-full w-full">
       <div className="section1 font-[lausanne-500]">
         <div
           ref={imageDivRef}

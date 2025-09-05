@@ -2,14 +2,40 @@
 
 @font-face {
     font-family: "lausanne-500";
-    src: url(../public/fonts/Lausanne-500.woff2);
+    src: url(/fonts/Lausanne-500.woff2);
 }
 
 @font-face {
     font-family: "lausanne-300";
-    src: url(../public/fonts/Lausanne-300.woff2);
+    src: url(/fonts/Lausanne-300.woff2);
 }
 
 body {
     background-color: #111;
+}
+
+.moveX {
+    animation: moveAnimation 10s linear infinite;
+}
+
+@keyframes moveAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.hoverContainer {
+    height: 0%;
+    cursor: pointer;
+}
+
+.item:hover .hoverContainer {
+    height: 100%;
+    padding-top: 16px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
