@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  optimizeDeps: {
+    exclude: ['gsap/SplitText'] // Exclude SplitText from optimization
+  }
 })
