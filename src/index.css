@@ -1,46 +1,76 @@
 @import "tailwindcss";
 
-body{
-    background-color: #111;
+body {
+  background-color: #111;
 }
 
 @font-face {
-    font-family: "lausanne-500";
-    src: url(/fonts/Lausanne-500.woff2);
+  font-family: "lausanne-500";
+  src: url(/fonts/Lausanne-500.woff2);
 }
 
 @font-face {
-    font-family: "lausanne-300";
-    src: url(/fonts/Lausanne-300.woff2);
+  font-family: "lausanne-300";
+  src: url(/fonts/Lausanne-300.woff2);
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-html, body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+html,
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Initial closed state for navbar */
-.projectsDiv, 
+.projectsDiv,
 .agentsDiv {
   height: 0;
   overflow: hidden;
 }
 
-.projectsDiv h3, 
-.agentsDiv h3, 
+.projectsDiv h3,
+.agentsDiv h3,
 .menuDiv h3 {
   opacity: 0;
 }
 
 .menuDiv {
-  height: 3.5rem; /* Start in compact state */
+  height: 3.5rem;
+  /* Start in compact state */
 }
 
 /* Optional: Hide overflow to prevent content showing during animation */
 .navbar {
   overflow: hidden;
+}
+
+.moveX {
+  animation: moveAnimation 10s linear infinite;
+}
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hoverContainer {
+  height: 0%;
+  cursor: pointer;
+}
+
+.item:hover .hoverContainer {
+  height: 100%;
+  padding-top: 16px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
